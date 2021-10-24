@@ -1,17 +1,11 @@
 class HelloController < ApplicationController
-  # protect_from_forgery
+  layout 'hello'
 
   def index
-    if request.post? then
-      @title = 'Result'
-      if params['r1'] then
-        @msg = 'you selected: ' + params['r1']
-      else
-        @msg = 'not selected...'
-      end
-    else
-      @title = 'Index'
-      @msg = 'selected radio button...'
-    end
+    @header = 'layout sample'
+    @footer = 'copyright SYODA-TUYAO 2020.'
+    @title = 'New Layout'
+    @msg = 'this is sample page!'
   end
+
 end

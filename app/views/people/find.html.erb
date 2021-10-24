@@ -1,0 +1,22 @@
+<h1 class="display-4 text-primary">People#Find</h1>
+<p><%= @msg %></p>
+<%= form_with model: @people, url: {controller: 'people', action: 'find' }, local:true do |f| %>
+<div class="form-group">
+  <%= f.label :FInd %>
+  <%= f.search_field, class :"form-control" %>
+</div>
+<%= f.submit %>
+
+<table class="table">
+  <tr>
+    <th>ID</th><th>Name</th><th>Age</th><th>Mail</th>
+  </tr>
+  <% @people.each do |obj| %>
+  <tr>
+    <td><%= obj.id %></td>
+    <td><%= obj.name %></td>
+    <td><%= obj.age %></td>
+    <td><%= obj.mail %></td>
+  </tr>
+  <% end %>
+</table>

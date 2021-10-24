@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>RailsApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.css">
+    <script src="https://kit.fontawesome.com/8cc3d59850.js" crossorigin="anonymous"></script>
+    <%= stylesheet_link_tag    'people', media: 'all', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <body class="container">
+    <%= yield %>
+  </body>
+</html>

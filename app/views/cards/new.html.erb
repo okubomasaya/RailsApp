@@ -1,0 +1,28 @@
+<h1 class="display-4 text-primary">Cards#new</h1>
+<p>※登録する読書データを入力してください。</p>
+<%= form_with model: @cards, local :true do |f| %>
+  <div class="form-group">
+    <%= f.label :タイトル%>
+    <%= f.text_field :title, class:"form_control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :著者%>
+    <%= f.text_field :author, class:"form_control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :価格%>
+    <%= f.text_field :price, class:"form_control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :出版社%>
+    <%= f.text_field :publisher, class:"form_control" %>
+  </div>
+  <div class="form-group">
+    <%= f.label :コメント%>
+    <%= f.text_area :memo, class:"form_control" %>
+  </div>
+  <%= f.submit "保存" %>
+<% end %>
+<p class="link"><a href="cards">
+  &lt;&lt; ※トップページに戻る
+</a></p>
